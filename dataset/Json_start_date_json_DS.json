@@ -1,0 +1,29 @@
+{
+	"name": "Json_start_date_json_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage_LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "start_date.json",
+				"fileSystem": "source"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"table_name": {
+					"type": "string"
+				},
+				"date_column": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
