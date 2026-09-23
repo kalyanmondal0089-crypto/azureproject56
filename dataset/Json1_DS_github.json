@@ -1,0 +1,26 @@
+{
+	"name": "Json1_DS_github",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "github_LS",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"filename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "anshlambagit/Uber_Data_Engineer_Project/refs/heads/main/Data/@{dataset().filename}",
+					"type": "Expression"
+				}
+			}
+		},
+		"schema": {}
+	}
+}
